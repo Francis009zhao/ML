@@ -1,0 +1,9 @@
+1、DigitRec_CNN.py
+(1)先将训练集D拆成k个大小相似但互不相交的子集D1,D2,…,Dk；
+(2) 令Dj’= D - Dj，在Dj’上训练一个弱学习器Lj。将Dj作为测试集，获得Lj在Dj上的输出Dj’’；
+(3)步骤2可以得到k个弱学习器以及k个相应的输出Dj’’,这个k个输出加上原本的类标构成新的训练集Dn；
+(4) 在Dn训练次学习器L，L即为最后的学习器。
+
+以上Stacking只做了一层，据kaggle上的大神反馈，Stacking可以做好多层，会有神奇的效果。
+
+下面给出kaggle中一个Stacking的实例，就是入门级的titanic那道题单层stacking的源码
